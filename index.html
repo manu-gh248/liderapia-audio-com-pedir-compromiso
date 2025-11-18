@@ -61,8 +61,7 @@
         }
 
         /* Main con la foto de fondo llenando la pantalla */
-            background-image: url('https://i.ibb.co/4w0QxGJL/Gemini-Generated-Image-d7gszzd7gszzd7gs.jpg');
-            background-size: cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/4w0QxGJL/Gemini-Generated-Image-d7gszzd7gszzd7gs.jpg');            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -70,33 +69,8 @@
             position: relative;
         }
 
-            main::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        pointer-events: none;
     }
-
-    main > * {
-        position: relative;
-        z-index: 2;
-    }
-
-                /* Hacer transparentes header, sections y footer */
-        header {
-                        position: sticky;
-            top: 0;
-            z-index: 100;
-            background-color: #000000;
-        }
-
                 /* Sección de título con fondo morado */
-        .bg-\[\#FEBB00\] {
                         position: sticky;
             top: 0; /* Altura del header */
             z-index: 90;
