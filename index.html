@@ -71,10 +71,17 @@
 
                 /* Hacer transparentes header, sections y footer */
         header {
+                        position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #000000;
         }
 
                 /* Sección de título con fondo morado */
         .bg-\[\#FEBB00\] {
+                        position: sticky;
+            top: 60px; /* Altura del header */
+            z-index: 90;
             background-color: #7042DC !important;
             color: white !important;
         }
