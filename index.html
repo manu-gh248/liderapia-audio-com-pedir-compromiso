@@ -54,7 +54,13 @@
                     }
 
                 /* Estilo para el body con fondo de pantalla completa */
-        body {
+        body         body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main con la foto de fondo llenando la pantalla */
+        main {
             background-image: url('https://i.ibb.co/kV4d4m51/Gemini-Generated-Image-crch4gcrch4gcrch.png');
             background-size: cover;
             background-position: center;
@@ -65,41 +71,30 @@
 
                 /* Hacer transparentes header, sections y footer */
         header {
-            background-color: rgba(0, 0, 0, 0.7) !important;
         }
 
-        section {
+                /* Sección de título con fondo morado */
+        .bg-\[\#FEBB00\] {
+            background-color: #7042DC !important;
+            color: white !important;
+        }
+
+        /* Sections del main con transparencia */
+        main section {
             background-color: rgba(0, 0, 0, 0.5) !important;
         }
 
+
         footer {
-            background-color: rgba(0, 0, 0, 0.7) !important;
         }
 
         /* Asegurar que el hero no tenga background */
-        .hero-background {
-            background: none !important;
-        }
 
         /* Estilos para la sección Hero con la imagen de fondo */
 
         /* Superposición para mejorar la legibilidad del texto */
-        .hero-background::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Overlay negro semitransparente */
-            z-index: 1;
-                                 }
 
         /* Asegura que el contenido esté por encima de la superposición */
-        .hero-content {
-            position: relative;
-            z-index: 2;
-                      }
     </style>
 </head>
 <body class="font-sans bg-liderapia-black text-liderapia-white text-brand">
