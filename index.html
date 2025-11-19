@@ -82,6 +82,19 @@
         .pb-fixed-header {
             padding-top: 97px; 
         }
+        /* Barra morada parcialmente oculta y dinámica */
+        .overlap-header {
+              position: sticky;
+              top: 97px;           /* Coincide con la altura del header fijo */
+              margin-top: -40px;   /* cantidad de solapamiento, ajusta si quieres */
+              z-index: 10;
+              box-shadow: 0 8px 24px -8px rgba(68, 0, 166, 0.18);
+              transition: margin-top 0.3s, box-shadow 0.3s;
+        }
+        .overlap-header.hide {
+              margin-top: -60px;   /* se oculta más cuando scroll */
+              box-shadow: 0 2px 8px -8px rgba(68, 0, 166, 0.08);
+        }
     </style>
 </head>
 <body class="font-sans bg-liderapia-black text-liderapia-white text-brand pb-fixed-header">
@@ -93,7 +106,7 @@
         </div>
     </header>
 
-    <section class="bg-[#7042DC] text-center py-4 px-6">
+    <section class="bg-[#7042DC] text-center py-4 px-6 overlap-header">
         <p class="text-brand text-lg md:text-xl text-black font-normal">Comunicación motivadora · Pedir compromiso</p>
     </section>
 
@@ -131,5 +144,17 @@
     </elevenlabs-convai>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript">
     </script>
+    <script>
+        document.addEventListener('scroll', () => {
+          const barra = document.querySelector('.overlap-header');
+          if (!barra) return;
+          if (window.scrollY > 80) {
+            barra.classList.add('hide');
+          } else {
+            barra.classList.remove('hide');
+      }
+});
+</script>
+
 </body>
 </html>
